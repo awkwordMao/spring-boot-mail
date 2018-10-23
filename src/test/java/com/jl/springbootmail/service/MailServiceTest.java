@@ -21,6 +21,7 @@ public class MailServiceTest {
     @Test
     public void sendTemplateMailTest() throws Exception{
         Context context = new Context();
+        //设置email.html中的 id 参数
         context.setVariable("id", 007);
 
         String emailTemplate = templateEngine.process("email", context);

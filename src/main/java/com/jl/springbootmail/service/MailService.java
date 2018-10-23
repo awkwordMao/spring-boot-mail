@@ -78,6 +78,15 @@ public class MailService {
         javaMailSender.send(message);
     }
 
+    /**
+     * 发送带图片的邮件 发送多张图片，直接加
+     * @param to
+     * @param subject
+     * @param content
+     * @param rscPath
+     * @param rscId
+     * @throws MessagingException
+     */
     public void sendInlineResourceMail(String to, String subject, String content, String rscPath, String rscId) throws MessagingException {
         MimeMessage message = javaMailSender.createMimeMessage();
 
